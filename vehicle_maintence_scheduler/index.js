@@ -9,7 +9,7 @@ app.use(express.json());
 const BASE = 'http://20.207.122.201/evaluation-service';
 const headers = () => ({ Authorization: `Bearer ${process.env.ACCESS_TOKEN}` });
 
-// 0/1 Knapsack - maximize impact within mechanic-hour budget
+// 0/1 Knapsack 
 function knapsack(tasks, capacity) {
   const n = tasks.length;
   const dp = Array.from({ length: n + 1 }, () => new Array(capacity + 1).fill(0));
@@ -24,7 +24,6 @@ function knapsack(tasks, capacity) {
     }
   }
 
-  // backtrack to find which tasks were selected
   const selected = [];
   let w = capacity;
   for (let i = n; i > 0; i--) {

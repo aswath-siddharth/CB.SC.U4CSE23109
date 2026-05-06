@@ -9,13 +9,12 @@ app.use(express.json());
 const NOTIF_API = 'http://20.207.122.201/evaluation-service/notifications';
 const headers = () => ({ Authorization: `Bearer ${process.env.ACCESS_TOKEN}` });
 
-// Placement > Result > Event
+
 const PRIORITY = { Placement: 3, Result: 2, Event: 1 };
 
 Log('backend', 'info', 'middleware', 'notification_app_be starting up');
 
-// Stage 6 - Priority Inbox
-// GET /notifications/priority?n=10
+
 app.get('/notifications/priority', async (req, res) => {
   const n = parseInt(req.query.n) || 10;
   Log('backend', 'info', 'route', `GET /notifications/priority called with n=${n}`);

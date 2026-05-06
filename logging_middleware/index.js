@@ -30,7 +30,7 @@ async function Log(stack, level, pkg, message) {
       { headers: { Authorization: `Bearer ${process.env.ACCESS_TOKEN}` } }
     );
   } catch (err) {
-    // Ignore logging errors silently to avoid using console.log/console.error
+    
   }
 }
 
