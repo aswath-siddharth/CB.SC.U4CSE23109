@@ -1,4 +1,4 @@
-# AFFORDMED INTERVIEW REPO 
+# REPO 
 
 The output screenshots of the solutions are inside each respective folders
 
